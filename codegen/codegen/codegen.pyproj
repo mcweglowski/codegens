@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f9f3636-f22d-4c6d-b37d-1dc6d6b59b79</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>codegen.py</StartupFile>
+    <StartupFile>__main__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,33 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="codegen.py" />
+    <Compile Include="app.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\codeitem.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__main__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="core\" />
+    <Folder Include="tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.json">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

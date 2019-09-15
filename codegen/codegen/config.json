@@ -1,0 +1,16 @@
+[
+    {
+        "dest_file": "d:\\source\\dest_file.cs",
+        "start_key": "{",
+        "start_offset": 4,
+        "end_key": "}",
+        "line_pattern": "    public {:var_type} int {:var_name}"
+    },
+    {
+      "dest_file": "d:\\source\\dest_file2.cs",
+      "start_key": "{",
+      "start_offset": 6,
+      "end_key": "}",
+      "line_pattern": "    public {:var_type} int preFix{:var_name}"
+    }
+]
