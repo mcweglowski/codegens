@@ -1,6 +1,6 @@
 import json
-from core import config
 from core.codeitem import code_item
+from config import config
 
 def readcodeitems():
     content = open('config.json')
@@ -8,7 +8,7 @@ def readcodeitems():
     codeitems = [code_item(**item) for item in json.loads(contentstring)]
     return codeitems
 
-def readconfig():
+def read():
     file_content = open('config.json').read()
     json_content = json.loads(file_content)
     source_path  = json_content['sourcepath']

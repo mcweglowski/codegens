@@ -24,13 +24,16 @@
     <Compile Include="app.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="config\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\codeitem.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="core\config.py">
+    <Compile Include="config\config.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="core\configreader.py">
+    <Compile Include="config\configreader.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="core\__init__.py">
@@ -50,6 +53,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="config\" />
     <Folder Include="core\" />
     <Folder Include="tests\" />
   </ItemGroup>
