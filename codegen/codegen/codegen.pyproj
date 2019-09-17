@@ -27,7 +27,13 @@
     <Compile Include="core\codeitem.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\configreader.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_core_configreader_readcodeitems.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="tests\__init__.py">
