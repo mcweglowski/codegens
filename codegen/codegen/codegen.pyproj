@@ -27,6 +27,9 @@
     <Compile Include="core\codeitem.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\config.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\configreader.py">
       <SubType>Code</SubType>
     </Compile>
