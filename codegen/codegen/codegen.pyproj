@@ -39,7 +39,16 @@
     <Compile Include="core\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="tests\test_core_configreader_readcodeitems.py">
+    <Compile Include="excel\excel_reader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="excel\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_excel.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="tests\__init__.py">
@@ -55,12 +64,14 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="core\" />
+    <Folder Include="excel\" />
     <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="SampleData.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

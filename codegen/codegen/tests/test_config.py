@@ -1,7 +1,7 @@
 import unittest
 from config.configreader import read
 
-class Test_core_configreader(unittest.TestCase):
+class test_config(unittest.TestCase):
     def test_readconfig(self):
         expected = 2
         config_data = read()
