@@ -1,6 +1,5 @@
 import openpyxl
 from openpyxl.cell import cell
-from codegen.config import config
 
 def read(config):
     try:

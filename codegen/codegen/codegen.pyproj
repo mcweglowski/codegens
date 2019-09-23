@@ -39,6 +39,12 @@
     <Compile Include="core\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="cs\paste_code.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cs\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="excel\excel_reader.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +70,7 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="core\" />
+    <Folder Include="cs\" />
     <Folder Include="excel\" />
     <Folder Include="tests\" />
   </ItemGroup>
