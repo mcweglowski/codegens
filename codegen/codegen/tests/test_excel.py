@@ -4,9 +4,10 @@ from config import config
 
 class test_excel(unittest.TestCase):
     def test_excel_reader_read(self):
-        config_data = config.config('SampleData.xlsx', 'Fields', '', None, 6, 'A', 'C')
-        rowset = excel_reader.read(config_data)
+        config_data = config.config('SampleData.xlsx', ['Fields', 'ConstantTextDefs'], None, 6, 'A', 'C')
+        rowsets = excel_reader.read(config_data)
 
+        rowset = rowsets['Fields']
         assert 4          == len(rowset)
         assert "UserName" == rowset[0][0].value
         assert 0          == rowset[0][1].value

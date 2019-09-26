@@ -1,5 +1,6 @@
 class code_item(object):
-    def __init__(self, dest_file, start_key, start_offset, end_key, line_pattern):
+    def __init__(self, source_tab, dest_file, start_key, start_offset, end_key, line_pattern):
+        self.source_tab   = source_tab
         self.dest_file    = dest_file
         self.start_key    = start_key
         self.start_offset = start_offset
@@ -20,4 +21,4 @@ class code_item(object):
                                     field_id          = 485 + row[column_id].value * 3 + 0,
                                     short_id          = 485 + row[column_id].value * 3 + 1,
                                     descr_id          = 485 + row[column_id].value * 3 + 2)
-                for row in dataset]
+                for row in dataset[self.source_tab]]
