@@ -78,6 +78,9 @@
     <Content Include="config.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="config_template.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="SampleData.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
