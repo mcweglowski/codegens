@@ -20,7 +20,7 @@ def find_paste_range(dest_file, start_key, end_key):
 
 def replace_code(dest_file, start_line_index, end_line_index, code_to_paste):
     try:
-        cs_destination = open(dest_file, "r+")
+        cs_destination = open(dest_file, "r+", encoding='utf8')
         content = cs_destination.readlines()
         del content[start_line_index:end_line_index]        
         content[start_line_index:start_line_index] = code_to_paste
