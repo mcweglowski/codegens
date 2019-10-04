@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4f9f3636-f22d-4c6d-b37d-1dc6d6b59b79</ProjectGuid>
+    <ProjectGuid>3c55188f-e6a3-43e0-9050-51e45eb92574</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>__main__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>codegen</Name>
-    <RootNamespace>codegen</RootNamespace>
+    <Name>codegen_dbfirst</Name>
+    <RootNamespace>codegen_dbfirst</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,45 +24,29 @@
     <Compile Include="app.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="config\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="core\codeitem.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="config\config.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="config\configreader.py">
+    <Compile Include="config\config_reader.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="config\connection_string.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\code_item.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="core\destination_item.py" />
     <Compile Include="core\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="cs\paste_code.py">
+    <Compile Include="input_reader\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="cs\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="excel\excel_reader.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="excel\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tests\test_config.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tests\test_excel.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tests\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="__init__.py" />
     <Compile Include="__main__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -70,18 +54,11 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="core\" />
-    <Folder Include="cs\" />
-    <Folder Include="excel\" />
-    <Folder Include="tests\" />
+    <Folder Include="input_reader\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config.json">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="config_template.json">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="SampleData.xlsx" />
+    <Content Include="config_base.json" />
+    <Content Include="config.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
