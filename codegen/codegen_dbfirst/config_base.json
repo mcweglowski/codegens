@@ -2,7 +2,7 @@
     "connection_string": {
         "server": ".",
         "database": "FunctionalTests",
-        "connection_mode": "INTEGRATED",
+        "trusted_connection": "INTEGRATED",
         "user": "",
         "password": ""
     },

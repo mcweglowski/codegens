@@ -30,9 +30,6 @@
     <Compile Include="config\config_reader.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="config\connection_string.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="config\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +38,15 @@
     </Compile>
     <Compile Include="core\destination_item.py" />
     <Compile Include="core\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\queries.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\tables_reader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="database\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="input_reader\__init__.py">
@@ -54,6 +60,7 @@
   <ItemGroup>
     <Folder Include="config\" />
     <Folder Include="core\" />
+    <Folder Include="database\" />
     <Folder Include="input_reader\" />
   </ItemGroup>
   <ItemGroup>
