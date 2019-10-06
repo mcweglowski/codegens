@@ -19,11 +19,15 @@
     "destination": [
         {
             "destination_proj": "d:\\temp\\Core.csproj",
-            "destination_file_path": "d:\\temp\\Entities\\"
+            "destination_file_path": "d:\\temp\\Entities\\",
+            "line_pattern": "",
+            "file_pattern": ""
         },
         {
             "destination_proj": "d:\\temp\\Configuration.csproj",
-            "destination_file_path": ""
+            "destination_file_path": "",
+            "line_pattern": "",
+            "file_pattern": ""
         }
     ]
 }
