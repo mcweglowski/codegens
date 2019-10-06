@@ -263,3 +263,4 @@ __pycache__/
 # ignore files
 /codegen/codegen/config.json
 /codegen/codegen/config.json
+/codegen/codegen_dbfirst/config.json
