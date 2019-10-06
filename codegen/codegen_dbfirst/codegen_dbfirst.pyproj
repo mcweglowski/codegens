@@ -37,6 +37,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="core\destination_item.py" />
+    <Compile Include="core\table_row.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\__init__.py">
       <SubType>Code</SubType>
     </Compile>
