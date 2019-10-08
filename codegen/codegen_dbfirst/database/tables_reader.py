@@ -1,11 +1,11 @@
 import pyodbc
 from database import queries
-from core.table_row import table_row
+from core.column import column
 
 def read(connection_string, code_items):
     tables_configuration = get_tables_configuration(connection_string, code_items)
     for item in code_items:
-        item.columns = [table_row(c.column_name, c.data_type, c.max_length, c.precision, c.scale, c.is_nullable, c.primary_key) 
+        item.columns = [column(c.column_name, c.data_type, c.max_length, c.precision, c.scale, c.is_nullable, c.primary_key) 
                         for c in tables_configuration if c.table_name == item.table_name]
 
 def get_tables_configuration(connection_string, code_items):
