@@ -1,9 +1,13 @@
 from core import sqltocsharp
 
 class destination_item(object):
-    def __init__(self, destination_proj, destination_file_path, line_pattern, file_pattern):
-        self.destination_proj      = destination_proj,
-        self.destination_file_path = destination_file_path
+    def __init__(self, destination_proj, destination_file_path, inner_folder, file_name, csproj_search_pattern, csproj_line_pattern, line_pattern, file_pattern):
+        self.destination_proj      = ''.join(destination_proj)
+        self.destination_file_path = ''.join(destination_file_path)
+        self.inner_folder          = inner_folder
+        self.file_name             = file_name
+        self.csproj_search_pattern = csproj_search_pattern
+        self.csproj_line_pattern   = csproj_line_pattern
         self.line_pattern          = line_pattern
         self.file_pattern          = "".join(file_pattern)
 

@@ -36,6 +36,9 @@
     <Compile Include="core\code_item.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="core\csharp_project.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="core\destination_item.py" />
     <Compile Include="core\sqltocsharp.py">
       <SubType>Code</SubType>
