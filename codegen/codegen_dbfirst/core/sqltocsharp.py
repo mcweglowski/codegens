@@ -28,9 +28,9 @@ def get_configuration(data_type, is_nullable, max_length, primary_key):
         field += ".HasMaxLength({})".format(max_length)
 
     if True == is_nullable:
-        field += ".IsRequired()"
-    else:
         field += ".IsOptional()"
+    else:
+        field += ".IsRequired()"
 
     if True == primary_key:
         field += ".HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)"

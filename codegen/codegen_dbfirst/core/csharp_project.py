@@ -1,4 +1,19 @@
 def add_code(destination_item, entity_name, generated_code):
+    add_in_csproj(destination_item, entity_name)
+    add_file(destination_item, entity_name, generated_code)
+
+
+def add_file(destination_item, entity_name, generated_code):
+    file_name = destination_item.file_name.format(entity_name)
+    file_path = destination_item.destination_file_path + file_name
+
+    dest_file = open(file_path, "w+", encoding='utf8')
+    for line_number, line in enumerate(generated_code, 1):
+        dest_file.write(line)
+    dest_file.truncate()
+    dest_file.close()
+
+def add_in_csproj(destination_item, entity_name):
     file_content = []
     with open(destination_item.destination_proj, 'r') as dest_file:
         file_content = dest_file.readlines()        
@@ -26,41 +41,3 @@ def add_code(destination_item, entity_name, generated_code):
             dest_file.write(line)
         dest_file.truncate()
         dest_file.close()
-
-
-    print('end')
-
-
-#def add_code(destination_item, generated_code):
-#    mydoc = minidom.parse(destination_item.destination_proj)
-#    nodes_list = mydoc.getElementsByTagName('ItemGroup')
-#    compile_node = findCompileNode(nodes_list)
-#
-#    new_node = mydoc.createElement("Test")
-#    compile_node.appendChild(new_node)
-#
-#    with open(destination_item.destination_proj, 'w', encoding='utf8') as file:
-#        file.write(mydoc.toxml())
-
-
-
-#    print('end')
-#
-#def findCompileNode(nodes_list):
-#    for node in nodes_list:
-#        for childNode in node.childNodes:
-#            if childNode.nodeName == "Compile":
-#                return node
-#    return None
-
-
-#import xml.etree.ElementTree as ET
-#
-#
-#def add_code(destination_item, generated_code):
-#    tree = ET.parse(destination_item.destination_proj)
-#    root = tree.getroot()
-#        
-#    for child in root:
-#        print(child.tag, child.attrib)
-#    print('End')
