@@ -1,0 +1,64 @@
+{
+    "sourcepath": "\\\\osl-srv-file\\escalifs\\Development Tools\\EscaliFields_generator.xlsm",
+    "source_tabs": [ "Fields", "ConstantTextDefs" ],
+    "start_search_row": 6,
+    "column_range_start": "A",
+    "column_range_stop": "C",
+    "destfolder": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\",
+    "code_items": [
+        {
+            "is_active": true,
+            "source_tab": "Fields",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldDefinitions.cs",
+            "start_key": "public const int IdWCFSerializerDefault",
+            "start_offset": 0,
+            "end_key": "}",
+            "line_pattern": "\t\tpublic const int Id{field_name:<45}= {id};\n"
+        },
+        {
+            "is_active": true,
+            "source_tab": "Fields",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldDefinitions.cs",
+            "start_key": "public static readonly EscaliFieldDef",
+            "start_offset": 0,
+            "end_key": "}",
+            "line_pattern": "\t\tpublic static readonly EscaliFieldDef {field_name:<45}= new EscaliFieldDef(EscaliFieldDefIds.Id{field_name:<44}, {field_name_quoted:<46}, {field_name_quoted:<46}, EscaliDataTypeDef.{data_type:<20}, EscaliFieldTextDef.{field_name});\n"
+        },
+        {
+            "is_active": true,
+            "source_tab": "Fields",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldTextDefinitions.cs",
+            "start_key": "public const int _NoText",
+            "start_offset": 1,
+            "end_key": "}",
+            "line_pattern": "\t\tpublic const int {field_name_field:<55} = {field_id};\n\t\tpublic const int {field_name_short:<55} = {short_id};\n\t\tpublic const int {field_name_descr:<55} = {descr_id};\n"
+        },
+        {
+            "is_active": true,
+            "source_tab": "Fields",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldTextDefinitions.cs",
+            "start_key": "public static readonly EscaliFieldTextDef",
+            "start_offset": 1,
+            "end_key": "}",
+            "line_pattern": "\t\tpublic static readonly EscaliFieldTextDef {field_name:<45}= new EscaliFieldTextDef(EscaliTextIds.{field_name_field:<49}, EscaliTextIds.{field_name_short:<49}, EscaliTextIds.{field_name_descr});\n"
+        },
+        {
+            "is_active": true,
+            "source_tab": "Fields",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldClasses.cs",
+            "start_key": "public class E_WCFSerializerDefault",
+            "start_offset": 0,
+            "end_key": "}",
+            "line_pattern": "    public class E_{field_name:45}: EscaliFieldBase {{ public override int EscaliFieldDefId {{ get {{ return EscaliFieldDefIds.Id{field_name}; }} }} }}\n"
+        },
+        {
+            "is_active": true,
+            "source_tab": "ConstantTextDefs",
+            "dest_file": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\EscaliFieldTextDefinitions.cs",
+            "start_key": "public const int DataImport",
+            "start_offset": -1,
+            "end_key": "}",
+            "line_pattern": "\t\tpublic const int {field_name:<94} = {offset_const}{id};\n"
+        }
+    ]
+}

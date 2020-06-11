@@ -1,0 +1,55 @@
+{
+    "connection_string": "Driver={SQL Server}; Server=.; Database=OceanYield; Trusted_Connection=yes;",
+    "source_tables": [
+        {
+            "table_name": "DimensionSetup",
+            "entity_name": "EntityDimensionSetup"
+        }
+    ],
+    "destination": [
+        {
+            "destination_proj": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\3.0.Escali.Data.DomainClasses\\3.0.Escali.Data.DomainClasses.csproj",
+            "destination_file_path": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.0.Escali.Core\\",
+            "inner_folder": "",
+            "file_name": "{}.cs",
+            "csproj_search_pattern": "Compile Include=",
+            "csproj_line_pattern": "    <Compile Include=\"{file_name}\" />\n",
+            "line_pattern": "\t\tpublic {csharp_type} {field_name} {{ get; set; }}\n",
+            "file_pattern": [
+                "namespace Escali.Data.DomainClasses\n",
+                "{{\n",
+                "    public class {entity_name}\n",
+                "    {{\n",
+                "{columns_text}",
+                "    }}\n",
+                "}}\n"
+            ]
+        },
+        {
+            "destination_proj": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.1.Escali.Model\\1.1.Escali.Model.csproj",
+            "destination_file_path": "D:\\EscaliSource\\EscaliFinancials\\EscaliFinancials\\1.1.Escali.Model\\DbConfigurations\\",
+            "inner_folder": "DbConfigurations",
+            "file_name": "{}Configuration.cs",
+            "csproj_search_pattern": "Compile Include=\"DbConfigurations",
+            "csproj_line_pattern": "    <Compile Include=\"{inner_folder}\\{file_name}\" />\n",
+            "line_pattern": "\t\t\tProperty(x => x.{field_name}).HasColumnName(@\"{field_name}\"){configuration};\n",
+            "file_pattern": [
+                "namespace Escali.Model.DbConfigurations\n",
+                "{{\n",
+                "    public class {entity_name}Configuration : EntityTypeConfiguration<{entity_name}>\n",
+                "    {{\n",
+                "        public {entity_name}Configuration() : this(\"dbo\") {{ }}\n",
+                "\n",
+                "        public {entity_name}Configuration(string schema)\n",
+                "        {{\n",
+                "          ToTable(\"{table_name}\", schema);\n",
+                "          HasKey(x => x.{primary_key});\n",
+                "\n",
+                "{columns_text}",
+                "        }}\n",
+                "    }}\n",
+                "}}"
+            ]
+        }
+    ]
+}
