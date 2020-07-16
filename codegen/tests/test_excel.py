@@ -1,6 +1,6 @@
 import unittest
 from excel import excel_reader
-from config import config
+from codegen.config import config
 
 class test_excel(unittest.TestCase):
     def test_excel_reader_read(self):

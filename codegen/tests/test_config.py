@@ -1,5 +1,5 @@
 import unittest
-from config.configreader import read
+from codegen.config.configreader import read
 
 class test_config(unittest.TestCase):
     def test_readconfig(self):

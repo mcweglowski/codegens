@@ -1,15 +1,20 @@
 import json
-from core.codeitem import code_item
-from config import config
+import os
+from pathlib import Path
+from codegen.core.codeitem import code_item
+from codegen.config import config
+
+ROOT_DIR = Path(os.path.dirname(os.path.abspath(__file__))).parent
+CONFIG_PATH = os.path.join(ROOT_DIR, 'config.json')
 
 def readcodeitems():
-    content = open('config.json')
+    content = open(CONFIG_PATH)
     contentstring = content.read()
     codeitems = [code_item(**item) for item in json.loads(contentstring)]
     return codeitems
 
 def read():
-    file_content = open('config.json').read()
+    file_content = open(CONFIG_PATH).read()
     json_content        = json.loads(file_content)
     source_path         = json_content['sourcepath']
     source_tabs         = json_content['source_tabs']

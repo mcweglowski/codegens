@@ -1,5 +1,5 @@
 import openpyxl
-from openpyxl.cell import cell
+from openpyxl.utils import cell
 
 def read(config):
     try:
@@ -21,7 +21,6 @@ def extract_dataset(workbook, source_tab_name, config):
 def find_last_data_row(worksheet, start_row, column_range_start):
     column_index = cell.column_index_from_string(column_range_start)
     for current_row in range(start_row, worksheet.max_row):
-        val = worksheet.cell(row = current_row, column = column_index).value
         if worksheet.cell(row = current_row, column = column_index).value == None:
             return current_row - 1
     return worksheet.max_row
