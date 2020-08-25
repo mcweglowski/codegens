@@ -21,6 +21,11 @@ def read():
     start_search_row    = json_content['start_search_row']
     column_range_start  = json_content['column_range_start']
     column_range_stop   = json_content['column_range_stop']
+    destfolder          = json_content['destfolder']
     code_items       = [code_item(**item) for item in json_content['code_items'] if item['is_active'] == True]
+
+    for item in code_items:
+        item.dest_file = destfolder + item.dest_file
+
     config_data      = config.config(source_path, source_tabs, code_items, start_search_row, column_range_start, column_range_stop)
     return config_data
