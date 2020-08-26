@@ -1,7 +1,11 @@
 import openpyxl
 from openpyxl.utils import cell
+import os.path
 
 def read(config):
+    if False == os.path.isfile(config.source_path):
+        return None
+    
     try:
         workbook = openpyxl.load_workbook(config.source_path, data_only=True)
         datasets = {}
