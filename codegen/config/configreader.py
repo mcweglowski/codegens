@@ -7,6 +7,8 @@ from codegen.config import config
 ROOT_DIR = Path(os.path.dirname(os.path.abspath(__file__))).parent
 CONFIG_PATH = os.path.join(ROOT_DIR, 'config.json')
 
+# CONFIG_PATH = 'config.json'
+
 def readcodeitems():
     content = open(CONFIG_PATH)
     contentstring = content.read()

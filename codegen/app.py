@@ -10,25 +10,28 @@ from colorama import Fore
 init()
 
 def run():
-    print(Fore.GREEN + 'Codegen begin')
-    print(Fore.YELLOW + 'Loading config file')
+    print(f'{Fore.GREEN}Codegen begin')
+    print(f'{Fore.YELLOW}Loading config file')
     config_data = configreader.read()
-    print(Fore.GREEN + 'Loading config file finished')
+    print(f'{Fore.GREEN}Loading config file finished')
 
-    print(Fore.YELLOW + 'Reading ' + config_data.source_path + ' file')
+    print(f'{Fore.YELLOW}Reading {config_data.source_path} file')
     excel_data  = excel_reader.read(config_data)
-    print(Fore.GREEN + 'Reading ' + config_data.source_path +' file finished')
+    print(f'{Fore.GREEN}Reading {config_data.source_path} file finished')
 
     if excel_data is None:
-        print(Fore.RED + 'File is not accessible: ' + config_data.source_path)
-        print(Fore.GREEN + 'Codegen finished with no effects.')
+        print(f'{Fore.RED}File is not accessible: {config_data.source_path}')
+        print(f'{Fore.GREEN}Codegen finished with no effects.')
         return
     
     for item in config_data.code_items:
-        print(Fore.YELLOW + 'Generate code for ' + item.dest_file)
+        
+        print(f'{Fore.YELLOW}Generate code for {item.dest_file}')
         code = item.generate_code(excel_data)
-        print(Fore.GREEN + 'Generate code for ' + item.dest_file + ' finished')
-        print(Fore.YELLOW + 'Pasting code into ' + item.dest_file)
+        print(f'{Fore.GREEN}Generate code for {item.dest_file} finished')
+        
+        print(f'{Fore.YELLOW}Pasting code into {item.dest_file}')
         paste_code.paste(item, code)
-        print(Fore.GREEN + 'Pasting code into ' + item.dest_file + ' finished')
-    print(Fore.GREEN + 'Codegen finish')
+        print(f'{Fore.GREEN}Pasting code into {item.dest_file} finished')
+    
+    print(f'{Fore.GREEN}Codegen finish')
