@@ -9,7 +9,7 @@ def readcodeitems():
     return codeitems
 
 def read():
-    file_content = open('codegn.json').read()
+    file_content = open('codegen.json').read()
     json_content        = json.loads(file_content)
     source_path         = json_content['sourcepath']
     source_tabs         = json_content['source_tabs']
