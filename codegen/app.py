@@ -1,7 +1,7 @@
-from config import configreader
-from cs import paste_code
-from core.codeitem import code_item
-from excel import excel_reader
+from codegen.config import configreader
+from codegen.cs import paste_code
+from codegen.core.codeitem import code_item
+from codegen.excel import excel_reader
 
 def run():
     config_data = configreader.read()

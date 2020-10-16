@@ -1,5 +1,5 @@
 import openpyxl
-from openpyxl.cell import cell
+from openpyxl.utils import cell
 
 def read(config):
     try:

@@ -261,6 +261,7 @@ __pycache__/
 *.pyc
 
 # ignore files
-/codegen/codegen/config.json
-/codegen/codegen/config.json
-/codegen/codegen_dbfirst/config.json
+codegen.json
+/codegen/codegen_template.json
+/codegen_dbfirst/codegen.json
+/codegen/venv/

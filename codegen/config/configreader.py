@@ -1,15 +1,15 @@
 import json
-from core.codeitem import code_item
-from config import config
+from codegen.core.codeitem import code_item
+from codegen.config import config
 
 def readcodeitems():
-    content = open('config.json')
+    content = open('codegen.json')
     contentstring = content.read()
     codeitems = [code_item(**item) for item in json.loads(contentstring)]
     return codeitems
 
 def read():
-    file_content = open('config.json').read()
+    file_content = open('codegn.json').read()
     json_content        = json.loads(file_content)
     source_path         = json_content['sourcepath']
     source_tabs         = json_content['source_tabs']
